@@ -90,13 +90,12 @@ function getCardStructure() {
 
 const toggleEdit = (ev) => {
   ev.stopPropagation();
-  // debugger;
+
   document.querySelector('.js-edit').classList.toggle('show');
   document.querySelector('.js-edit').classList.remove('d-none');
 };
 
 const listenArticle = () => {
-  // debugger;
   document.querySelectorAll('.js-card, .js-edit-close').forEach((card) => {
     card.addEventListener('click', toggleEdit);
   });
@@ -179,6 +178,7 @@ const addArticle = (ev) => {
 //   const buttonAddTask = list.querySelector('.ml-1.btn.btn-primary.btn-sm.text-white-50');
 //   buttonAddTask.addEventListener('click', addArticle(contenedorArticles, buttonAddTask));
 // });
+
 document.querySelector('.js-edit-modal').addEventListener('click', preventEditClosing);
 
 addCard.addEventListener('click', getCardStructure);
