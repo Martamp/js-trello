@@ -8,9 +8,11 @@ const toggleEdit = (ev) => {
   document.querySelector('.js-edit').classList.remove('d-none');
 };
 
-document.querySelectorAll('.js-card, .js-edit-close').forEach((card) => {
-  card.addEventListener('click', toggleEdit);
-});
+const listenArticle = () => {
+  document.querySelectorAll('.js-card, .js-edit-close').forEach((card) => {
+    card.addEventListener('click', toggleEdit);
+  });
+};
 
 const preventEditClosing = (ev) => {
   ev.stopPropagation();
